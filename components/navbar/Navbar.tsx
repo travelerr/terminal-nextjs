@@ -80,12 +80,18 @@ const NavbarComponent = () => {
   const { t } = useTranslation();
   const { isOpen, setIsOpen } = useSidebar();
 
+  function test() {
+    console.log(isOpen);
+    setIsOpen(!isOpen);
+    console.log(isOpen);
+  }
+
   return (
     <Navbar variant="light" expand className="navbar-bg">
       <span
         className="sidebar-toggle d-flex"
         onClick={() => {
-          setIsOpen(!isOpen);
+          test();
         }}
       >
         <i className="hamburger align-self-center" />
